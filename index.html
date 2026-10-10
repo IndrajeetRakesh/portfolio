@@ -3,9 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="The portfolio of Indrajeet, a computer science and AI student at Scaler School of Technology and IIT Madras.">
+    <title>Indrajeet | Student Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="site-header">
+        <a class="wordmark" href="#home" aria-label="Indrajeet home">I<span>.</span></a>
+        <nav aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+        </nav>
+        <a class="header-link" href="#education">My journey <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> Student · Curious by nature</p>
+                <h1>Hi, I’m<br><span>Indrajeet.</span></h1>
+                <p class="hero-description">
+                    Exploring the possibilities at the intersection of
+                    <strong>computer science, AI, and data science.</strong>
+                </p>
+                <a class="primary-link" href="#about">A little about me <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-art" aria-label="Decorative abstract orbit illustration" role="img">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="orbit orbit-three"></div>
+                <div class="orbit-core"><span>i.</span></div>
+                <span class="orbit-label label-top">LEARN</span>
+                <span class="orbit-label label-right">BUILD</span>
+                <span class="orbit-label label-bottom">EXPLORE</span>
+                <span class="spark spark-one">✳</span>
+                <span class="spark spark-two">✳</span>
+            </div>
+            <a class="scroll-note" href="#about"><span></span> SCROLL TO EXPLORE</a>
+            <span class="hero-index">01 / 03</span>
+        </section>
+
+        <section class="about section-wrap" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">01 — A bit about me</p>
+                <h2>Learning today.<br><span>Building for tomorrow.</span></h2>
+            </div>
+            <div class="about-copy">
+                <p>
+                    I’m Indrajeet, a student interested in how technology can make sense
+                    of complex problems. I’m building my foundation in computer science
+                    and AI while studying data science and applications.
+                </p>
+                <p class="quiet-note">Currently learning across two complementary paths.</p>
+            </div>
+        </section>
+
+        <section class="education section-wrap" id="education">
+            <div class="section-heading">
+                <p class="eyebrow">02 — My education</p>
+                <h2>Two paths.<br><span>One curious mind.</span></h2>
+            </div>
+            <div class="education-grid">
+                <article class="education-card card-dark">
+                    <span class="card-number">01</span>
+                    <div class="card-icon" aria-hidden="true">⌘</div>
+                    <p class="card-kicker">Undergraduate programme</p>
+                    <h3>Computer Science<br>&amp; Artificial Intelligence</h3>
+                    <p class="institution">Scaler School of Technology</p>
+                    <span class="card-arrow" aria-hidden="true">↗</span>
+                </article>
+                <article class="education-card card-light">
+                    <span class="card-number">02</span>
+                    <div class="card-icon" aria-hidden="true">∑</div>
+                    <p class="card-kicker">Bachelor of Science</p>
+                    <h3>Data Science<br>&amp; Applications</h3>
+                    <p class="institution">Indian Institute of Technology Madras</p>
+                    <span class="card-arrow" aria-hidden="true">↗</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="closing section-wrap">
+            <p class="eyebrow">03 — The journey continues</p>
+            <h2>Stay curious.<br><span>Keep creating.</span></h2>
+            <a href="#home" class="back-to-top">Back to top <span aria-hidden="true">↑</span></a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="wordmark" href="#home" aria-label="Back to top">I<span>.</span></a>
+        <p>Made with curiosity by Indrajeet</p>
+        <p>© 2026</p>
+    </footer>
 </body>
 </html>
