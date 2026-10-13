@@ -451,6 +451,484 @@ bc6c25
     #f{
         color: red;
     }
+
+    ```css
+/* ===== 1. SMOOTH PAGE ENTRY ANIMATION ===== */
+
+#container {
+    animation: pageEnter 1s ease-out both;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 2. HEADINGS ANIMATION ===== */
+
+#head2 {
+    animation: slideIn 0.8s ease-out 0.2s both;
+}
+
+#head3 {
+    animation: slideIn 0.9s ease-out 0.35s both;
+}
+
+#head4 {
+    animation: slideIn 0.9s ease-out 0.5s both;
+}
+
+#head5,
+#head6 {
+    animation: slideIn 1s ease-out 0.65s both;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== 3. PROFILE PHOTO ANIMATION ===== */
+
+#photo {
+    animation: photoReveal 1s ease-out 0.4s both;
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+@keyframes photoReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#photo:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 22px #38BDF8;
+}
+
+/* ===== 4. BUTTON HOVER ANIMATION ===== */
+
+#button1,
+#button2,
+#button3,
+#button4 {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
+}
+
+#button1:hover,
+#button2:hover,
+#button3:hover,
+#button4:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 18px rgba(56, 189, 248, 0.35);
+}
+
+/* ===== 5. ABOUT & SKILLS BOX ANIMATION ===== */
+
+#box1,
+#box2,
+#b1,
+#b2,
+#b3 {
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+#box1:hover,
+#box2:hover,
+#b1:hover,
+#b2:hover,
+#b3:hover {
+    transform: translateY(-6px);
+    border-color: #38BDF8;
+    box-shadow: 0 8px 22px rgba(56, 189, 248, 0.18);
+}
+
+/* ===== 6. CONTACT FORM ANIMATION ===== */
+
+.contact-box {
+    animation: contactReveal 1s ease-out both;
+}
+
+@keyframes contactReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#last input,
+#last textarea {
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#last input:focus,
+#last textarea:focus {
+    border-color: #38BDF8;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
+}
+
+#c4 {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#c4:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* ===== 7. RED BORDER GLOW ANIMATION ===== */
+
+#container {
+    animation:
+        pageEnter 1s ease-out both,
+        borderGlow 4s ease-in-out 1s infinite alternate;
+}
+
+@keyframes borderGlow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.15);
+    }
+
+    to {
+        box-shadow: 0 0 18px rgba(255, 0, 0, 0.4);
+    }
+}
+
+/* ===== 8. ACCESSIBILITY ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms ;
+        animation-iteration-count: 1 ;
+        transition-duration: 0.01ms ;
+    }
+}
+```
+
+```css
+/* ==================================
+   RESPONSIVE MEDIA QUERIES
+   ================================== */
+
+/* Tablet: 601px to 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    #container {
+        width: 95%;
+        height: 1600px;
+        box-sizing: border-box;
+    }
+
+    .line,
+    .line-section1,
+    .line-section2 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #photo {
+        left: auto;
+        right: 6%;
+    }
+
+    #b1 {
+        left: 40%;
+    }
+
+    #b2 {
+        left: 5%;
+    }
+
+    #b3 {
+        left: 75%;
+        width: 20%;
+        box-sizing: border-box;
+    }
+
+    #contact-section {
+        width: 85%;
+        left: 5%;
+    }
+
+    .contact-box {
+        width: 100%;
+    }
+}
+
+
+/* Mobile: 600px and below */
+@media (max-width: 600px) {
+
+    /* Main container */
+    #container {
+        width: 100%;
+        height: auto;
+        min-height: 1600px;
+        box-sizing: border-box;
+        border-width: 2px;
+        overflow: hidden;
+    }
+
+    /* Navigation */
+    #head1 {
+        left: 15px;
+        top: 10px;
+        font-size: 19px;
+    }
+
+    #bh1, #bh4, #bh2, #bh3, #bh5, #bh6 {
+        top: 48px;
+        font-size: 12px;
+    }
+
+    #bh1 { left: 15px; }
+    #bh4 { left: 53px; }
+    #bh2 { left: 100px; }
+    #bh3 { left: 145px; }
+    #bh5 { left: 205px; }
+    #bh6 { left: 260px; }
+
+    .line {
+        top: 78px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Hero section */
+    #head2 {
+        top: 95px;
+        left: 20px;
+        font-size: 13px;
+    }
+
+    #head3 {
+        top: 125px;
+        left: 20px;
+        font-size: 27px;
+    }
+
+    #head4 {
+        top: 170px;
+        left: 20px;
+        font-size: 15px;
+    }
+
+    #head5 {
+        top: 200px;
+        left: 20px;
+        right: 20px;
+        font-size: 13px;
+    }
+
+    #head6 {
+        top: 245px;
+        left: 20px;
+        font-size: 12px;
+    }
+
+    #photo {
+        width: 90px;
+        height: 90px;
+        top: 290px;
+        left: auto;
+        right: 20px;
+    }
+
+    /* Hero buttons */
+    #button1, #button2, #button3, #button4 {
+        top: 300px;
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #button1 { left: 20px; }
+    #button2 { left: 20px; top: 340px; }
+    #button3 { left: 100px; top: 340px; }
+    #button4 { left: 190px; top: 340px; }
+
+    /* Section divider */
+    .line-section1 {
+        top: 410px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Section headings */
+    #head7, #head8, #head9 {
+        left: 20px;
+        font-size: 20px;
+    }
+
+    #head7 { top: 425px; }
+    #head8 { top: 665px; }
+    #head9 { top: 910px; }
+
+    /* About and skills boxes */
+    #box1, #box2 {
+        left: 5%;
+        width: 90%;
+        height: auto;
+        min-height: 130px;
+        padding: 12px;
+        box-sizing: border-box;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    #box1 { top: 485px; }
+    #box2 { top: 725px; }
+
+    /* Learning cards */
+    #b1, #b2, #b3 {
+        left: 5%;
+        width: 90%;
+        height: auto;
+        min-height: 150px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
+    #b2 { top: 970px; }
+    #b1 { top: 1140px; }
+    #b3 { top: 1310px; }
+
+    .c1, .c2, .c3 {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #b1 h4, #b2 h4, #b3 h4 {
+        max-width: 100%;
+    }
+
+    #b1 h6, #b2 h6, #b3 h6 {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Contact section */
+    .line-section2 {
+        top: 1510px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #contact-section {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+
+    #head10 {
+        position: static;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .contact-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 18px;
+        box-sizing: border-box;
+    }
+
+    .contact-box h2 {
+        font-size: 23px;
+    }
+
+    #last {
+        position: static;
+        width: 100%;
+    }
+
+    #last input,
+    #last textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Footer */
+    #f {
+        text-align: center;
+        padding: 15px;
+        font-size: 13px;
+    }
+}
+
+
+/* Extra small phones */
+@media (max-width: 360px) {
+
+    #head1 {
+        font-size: 17px;
+    }
+
+    #bh1, #bh4, #bh2, #bh3, #bh5, #bh6 {
+        font-size: 10px;
+    }
+
+    #bh1 { left: 10px; }
+    #bh4 { left: 43px; }
+    #bh2 { left: 80px; }
+    #bh3 { left: 120px; }
+    #bh5 { left: 170px; }
+    #bh6 { left: 218px; }
+
+    #head3 {
+        font-size: 23px;
+    }
+
+    #photo {
+        width: 75px;
+        height: 75px;
+        right: 12px;
+    }
+
+    .contact-box {
+        padding: 14px;
+    }
+}
+```
+
+```
     
 
 
